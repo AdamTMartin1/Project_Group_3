@@ -56,7 +56,7 @@ class GenerationTime():
         print("GenerationTime", GenerationTime)
 
 if Choices == 3:
-    Time = int(input("Time"))
+    Time = float(input("Time"))
     NumberOfGenerations = int(input("NumberOfGenerations"))
     TimeOfGeneration = GenerationTime(Time,NumberOfGenerations)
     TimeOfGeneration.Generation_Time()
