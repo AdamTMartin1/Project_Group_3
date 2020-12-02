@@ -81,23 +81,6 @@ if Choices == 4:
     
     
     
-    
-class MarkAndRecapture():
-    def __init__(self, NumberOfCapturedFirstTime, NumberOfCapturedSecondTime,NumberOfRecaptured,):
-        self.NOCFT = NumberOfCapturedFirstTime
-        self.NOCST = NumberOfCapturedSecondTime
-        self.NOR = NumberOfRecaptured
-    def Mark_And_Recapture(self):
-        EstimatedPopulation = (self.NOCFT*self.NOCST) / self.NOR
-        print("EstimatedPopulation", EstimatedPopulation)
-
-if Choices == 4:
-    NumberOfCapturedFirstTime = int(input("NumberOfCapturedFirstTime"))
-    NumberOfCapturedSecondTime = int(input("NumberOfCapturedSecondTime"))
-    NumberOfRecaptured = int(input("NumberOfRecaptured"))
-    EstimatedPopulation = MarkAndRecapture(NumberOfCapturedFirstTime,NumberOfCapturedSecondTime,NumberOfRecaptured)
-    EstimatedPopulation.Mark_And_Recapture()
-
 
 
 
