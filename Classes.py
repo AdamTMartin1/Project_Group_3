@@ -61,7 +61,7 @@ class Population():
         self.I = Immigration
         self.E = Emigration
     def Next_Total_Population(self):
-        NextPopulation= self.P  + self.B - self.B + self.I - self.E
+        NextPopulation= PopulationAtTimeZero  + Births - Deaths + Immigration - Emigration
         print("NextPopulation", NextPopulation)
         return NextPopulation
 
@@ -107,7 +107,7 @@ if Choices == 6:
     NumberOfCapturedFirstTime = int(input("NumberOfCapturedFirstTime"))
     NumberOfCapturedSecondTime = int(input("NumberOfCapturedSecondTime"))
     NumberOfRecaptured = int(input("NumberOfRecaptured"))
-    EstimatedPopulation = MarkAndRecapture.Mark_And_Recapture(NumberOfCapturedFirstTime,NumberOfCapturedSecondTime,NumberOfRecaptured)
+    EstimatedPopulation = MarkAndRecapture(NumberOfCapturedFirstTime,NumberOfCapturedSecondTime,NumberOfRecaptured)
     
     
     
