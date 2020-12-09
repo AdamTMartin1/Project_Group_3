@@ -20,11 +20,11 @@ if Choices == 1:
     NumberOfColonies = int(input("NumberOfColonies"))
     AmountOfPlatted = int(input("AmountOfPlatted"))
     DilutionFactor = int(input("DilutionFactor"))
-    ColonyA = CFU(NumberOfColonies,AmountOfPlatted,DilutionFactor)
+    ColonyA = CFU.ColonyFormingUnit(NumberOfColonies,AmountOfPlatted,DilutionFactor)
     
 
 
-class Exponetial_Growth():
+class ExponetialGrowth():
     def __init__(self, GeometricGrowthRate, Population):
         self.GeometricGrowthRate = GeometricGrowthRate
         self.Population = Population
@@ -36,13 +36,13 @@ class Exponetial_Growth():
 if Choices == 2:        
     ExpontialGrowthRate = float(input("GeometricGrowthRate"))
     Population = int(input("Population"))
-    ExpontialGrowth = Exponetial_Growth(ExpontialGrowthRate,Population)
+    ExpontialGrowth = ExponetialGrowth.Exponetial_Growth(ExpontialGrowthRate,Population)
 
-class Geometric_Growth_over_time():
+class GeometricGrowthOverTime():
     def __init__(self, NetReproductiveRate, StartingPopulation):
         self.NetReproductiveRate = NetReproductiveRate
         self.StartingPopulation = StartingPopulation
-    def GeometricGrowthOverTime(self):
+    def Geometric_Growth_Over_Time(self):
         GeometricGrowthOverTime = self.NetReproductiveRate*StartingPopulation
         print("Geometric_Growth_over_time",GeometricGrowthOverTime)
         return GeometricGrowthOverTime
@@ -50,7 +50,7 @@ class Geometric_Growth_over_time():
 if Choices == 3:    
     NetReproductiveRate = float(input("NetReproductiveRate"))
     StartingPopulation = int(input("StartingPopulation"))
-    TotalPopulation = Geometric_Growth_over_time(NetReproductiveRate, StartingPopulation)
+    TotalPopulation = GeometricGrowthOverTime.Geometric_Growth_over_time(NetReproductiveRate, StartingPopulation)
 
 
 class Population():
@@ -71,7 +71,7 @@ if Choices == 4:
     Deaths = int(input("Deaths"))
     Immigration = int(input("Immigration"))
     Emigration = int(input("Emigration"))
-    NextPopulation = Population(PopulationAtTimeZero,Births,Deaths,Immigration,Emigration)
+    NextPopulation = Population.Next_Total_Population(PopulationAtTimeZero,Births,Deaths,Immigration,Emigration)
     
     
     
@@ -88,7 +88,7 @@ class GenerationTime():
 if Choices == 5:
     Time = float(input("Time"))
     NumberOfGenerations = int(input("NumberOfGenerations"))
-    TimeOfGeneration = GenerationTime(Time,NumberOfGenerations)
+    TimeOfGeneration = GenerationTime.Generation_Time(Time,NumberOfGenerations)
     
     
     
@@ -107,7 +107,7 @@ if Choices == 6:
     NumberOfCapturedFirstTime = int(input("NumberOfCapturedFirstTime"))
     NumberOfCapturedSecondTime = int(input("NumberOfCapturedSecondTime"))
     NumberOfRecaptured = int(input("NumberOfRecaptured"))
-    EstimatedPopulation = MarkAndRecapture(NumberOfCapturedFirstTime,NumberOfCapturedSecondTime,NumberOfRecaptured)
+    EstimatedPopulation = MarkAndRecapture.Mark_And_Recapture(NumberOfCapturedFirstTime,NumberOfCapturedSecondTime,NumberOfRecaptured)
     
     
     
