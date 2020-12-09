@@ -6,7 +6,7 @@ Created on Wed Dec  9 10:00:04 2020
 """
 
 # Imports ---------------
-from guizero import App, Text, PushButton
+from guizero import App, Text, PushButton, TextBox
 #from random import choice
 # Functions -------------
 class CFU():
@@ -70,6 +70,9 @@ class MarkAndRecapture():
 app = App("Calculator")
 # Widgets ---------------
 title = Text(app, "Push the red button to find out your spy name")
+#top_text = TextBox(app, "top text")
+
+Text = Text(app, "CFU")
 
 CFU_button = PushButton(app, CFU.ColonyFormingUnit, text="Colony Forming Unit")
 
@@ -82,6 +85,9 @@ P_button = PushButton(app, Population.Next_Total_Population, text="Next Total Po
 GT_button = PushButton(app, GenerationTime.Generation_Time, text="Generation Time")
 
 MAR_button = PushButton(app, MarkAndRecapture.Mark_And_Recapture, text="Mark And Recapture")
+
+
+#print(top_text)
 # Display ---------------
 app.display()
 
