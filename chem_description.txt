@@ -1,5 +1,0 @@
-#function that calculates the percentage yeild, it takes the actual yield and the theoretical yield and multiplies them by 100
-
-#function that calculates the pH of an equation using Hydrogen ions (H+), it requires a Hydrogen Ion Concentration, which it takes the log of (to the base 10) and multiplies by negative 1, giving pH
-
-#function that calculates the pH of an equatin using Hydroxide ions (OH-), it requires the Hydoxide ion Concentration, which it then takes the log of (to the base 10) and multiplies by negative 1, then it adds the answer to 14 to give pOH
