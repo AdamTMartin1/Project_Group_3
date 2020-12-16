@@ -99,6 +99,9 @@ class pOH():
     
 
 # App -------------------
+
+#the app function was taken from the module guizero which was imported earlier in this code
+
 app = App("Calculator")
 # Widgets ---------------
 title = Text(app, "Push the buttons to complete each calculations")
