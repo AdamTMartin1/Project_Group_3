@@ -8,9 +8,9 @@ from guizero import App, Text, PushButton                                      #
 import math                                                                    #Imports the module math which is used for many calculatios and contains useful things such as logs and Exponetial
 
 # Functions -------------
-class Calculations():
-    def ColonyFormingUnit():
-        NumberOfColonies = int(app.question('Number of colonies', 'Please enter as a whole number the number of colonies'))
+class Calculations():                                                          #Creates a class which stores all of the formula from the first semester in Year 1
+    def ColonyFormingUnit():                                                   #Function that works out the number of colonys there in after dilution and plating 
+        NumberOfColonies = int(app.question('Number of colonies', 'Please enter as a whole number the number of colonies')) 
         AmountOfPlatted = int(input("AmountOfPlatted"))
         DilutionFactor = float(input("DilutionFactor"))
         CFU= NumberOfColonies/ (AmountOfPlatted * DilutionFactor)
