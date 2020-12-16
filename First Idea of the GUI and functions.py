@@ -1,14 +1,12 @@
 # -*- coding: utf-8 -*-
 """
 Created on Wed Dec  9 10:00:04 2020
-
-@author: adamt
 """
 
-# Imports ---------------
+# Import modules ---------------
 from guizero import App, Text, PushButton
 import math
-#from random import choice
+
 # Functions -------------
 class CFU():
     def ColonyFormingUnit():
