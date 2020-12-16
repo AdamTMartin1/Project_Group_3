@@ -4,8 +4,8 @@ Created on Wed Dec  9 10:00:04 2020
 """
 
 # Import modules ---------------
-from guizero import App, Text, PushButton                                      #Takes in the folder guizero, importing in each choicen module from that folder. Guizero is a module folder that contains the modules required to create a GUI
-import math                                                                    #Imports the module math which is used for many calculatios and contains useful things such as logs and Exponetial
+from guizero import App, Text, PushButton                                      #Takes in the folder guizero, importing in each choicen module from that folder. Guizero is a module folder that contains the modules required to create a GUI.
+import math                                                                    #Imports the module math which is used for many calculatios and contains useful things such as logs and Exponetial.
 
 # Functions -------------
 class Calculations():                                                          #Creates a class which stores all of the formula from the first semester in Year 1
@@ -13,21 +13,21 @@ class Calculations():                                                          #
         NumberOfColonies = int(app.question('Number of colonies', 'Please enter as a whole number the number of colonies')) 
         AmountOfPlatted = int(input("AmountOfPlatted"))
         DilutionFactor = float(input("DilutionFactor"))
-        CFU= NumberOfColonies/ (AmountOfPlatted * DilutionFactor)
+        CFU= NumberOfColonies/ (AmountOfPlatted * DilutionFactor)              #Number of colony forming units is calculated by taking the number of of clonies and dividing it by the (amount of platted times the dilution actor).
         print("CFU", CFU)
         return CFU
     
-    def Exponential_Growth():                                                  #Function that works out the expontial growth in a population of microoganisms, it takes in the dilution factor and number of plated from the user. 
+    def Exponential_Growth():                                                  #Function that works out the expontial growth in a population, it takes in the expontial growth rate and the population from the user. 
         ExpontialGrowthRate = float(input("GeometricGrowthRate"))
         Population = int(input("Population"))
-        ExponentialGrowth = ExpontialGrowthRate*Population
+        ExponentialGrowth = ExpontialGrowthRate*Population                     #Expontial growth is calculated by timesing the eexpontial growth rate by the starting population.
         print("Exponential Growth", ExponentialGrowth)
         return ExponentialGrowth
 
-    def Geometric_Growth_Over_Time():
+    def Geometric_Growth_Over_Time():                                          #Function that works out the geometirc growth in a population over time, it takes in the net reproductive rate and the starting population from the user. 
         NetReproductiveRate = float(input("NetReproductiveRate"))
         StartingPopulation = int(input("StartingPopulation"))
-        GeometricGrowthOverTime = NetReproductiveRate*StartingPopulation
+        GeometricGrowthOverTime = NetReproductiveRate*StartingPopulation       #Geometirc growth over time is calculated by timesing the net reproductive rate and the starting population together.
         print("Geometric_Growth_over_time",GeometricGrowthOverTime)
         return GeometricGrowthOverTime 
 
