@@ -10,7 +10,7 @@ import math
 # Functions -------------
 class CFU():
     def ColonyFormingUnit():
-        NumberOfColonies = int(input("NumberOfColonies"))
+        NumberOfColonies = int(app.question('Number of colonies', 'Please enter as a whole number the number of colonies'))
         AmountOfPlatted = int(input("AmountOfPlatted"))
         DilutionFactor = float(input("DilutionFactor"))
         CFU= NumberOfColonies/ (AmountOfPlatted * DilutionFactor)
@@ -102,9 +102,13 @@ class pOH():
 
 app = App("Calculator")
 # Widgets ---------------
+
+#both widgets
+
 title = Text(app, "Push the buttons to complete each calculations")
+
 titlee = Text(app, "it will take you to the console")
-#top_text = TextBox(app, "top text")
+
 
 
 CFU_button = PushButton(app, CFU.ColonyFormingUnit, text="Colony Forming Unit")
