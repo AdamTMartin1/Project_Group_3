@@ -6,7 +6,8 @@ Created on Wed Dec  9 10:00:04 2020
 """
 
 # Imports ---------------
-from guizero import App, Text, PushButton, TextBox
+from guizero import App, Text, PushButton
+import math
 #from random import choice
 # Functions -------------
 class CFU():
@@ -64,15 +65,46 @@ class MarkAndRecapture():
 
 
 
+#Chem equations for the Project 
+
+# % yeild = (mass of desired products/total mass of reactants)x100
+
+class Perc_Yield():
+    def Percentage_Yield():
+        ActualYield = float(input("ActualYield"))
+        TheoreticalYield = float(input("TheoreticalYield"))
+        Perc_Yield = (ActualYield/TheoreticalYield)*100
+        print("Percentage Yield",Perc_Yield)
+        return Perc_Yield
+
+# pH =-log10[H+]
+
+class pH():
+    def pH_H():
+        Hydrogen_ion_concentration = float(input("Hydrogen_ion_concentration"))
+        pH = -1* (math.log10(Hydrogen_ion_concentration))
+        print("pH",pH)
+        return pH
+    
+
+class pOH():
+    def pH_OH():
+        Hydroxide_ion_concentration = float(input("Hydroxide_ion_concentration"))
+        pOH = -1* math.log10(Hydroxide_ion_concentration)
+        print("pOH",pOH)
+        return (pOH+14)
+
+
+
     
 
 # App -------------------
 app = App("Calculator")
 # Widgets ---------------
-title = Text(app, "Push the red button to find out your spy name")
+title = Text(app, "Push the buttons to complete each calculations")
+titlee = Text(app, "it will take you to the console")
 #top_text = TextBox(app, "top text")
 
-Text = Text(app, "CFU")
 
 CFU_button = PushButton(app, CFU.ColonyFormingUnit, text="Colony Forming Unit")
 
@@ -86,6 +118,11 @@ GT_button = PushButton(app, GenerationTime.Generation_Time, text="Generation Tim
 
 MAR_button = PushButton(app, MarkAndRecapture.Mark_And_Recapture, text="Mark And Recapture")
 
+PY_button = PushButton(app, Perc_Yield.Percentage_Yield, text="Percentage Yeild")
+
+PY_button = PushButton(app, pH.pH_H, text="pH")
+
+PY_button = PushButton(app, pOH.pH_OH, text="pOH")
 
 #print(top_text)
 # Display ---------------
