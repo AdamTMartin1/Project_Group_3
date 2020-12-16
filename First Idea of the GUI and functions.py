@@ -31,17 +31,17 @@ class Calculations():                                                          #
         print("Geometric_Growth_over_time",GeometricGrowthOverTime)
         return GeometricGrowthOverTime 
 
-    def Next_Total_Population():
+    def Next_Total_Population():                                               #Function that works out the next total population, it takes in the population at time zero, births, deaths, immigration and emmigration from the user. 
         PopulationAtTimeZero = int(input("Population"))
         Births = int(input("Births"))
         Deaths = int(input("Deaths"))
         Immigration = int(input("Immigration"))
         Emigration = int(input("Emigration"))
-        NextPopulation= PopulationAtTimeZero  + Births - Deaths + Immigration - Emigration
+        NextPopulation= PopulationAtTimeZero  + Births - Deaths + Immigration - Emigration #Next population is calculated by adding the population at time zero to births and immigration and taking away deaths and emigration
         print("NextPopulation", NextPopulation)
         return NextPopulation
 
-    def Generation_Time():
+    def Generation_Time():                                                     #Function that works out the next total population, it takes in the population at time zero, births, deaths, immigration and emmigration from the user. 
         Time = float(input("Time"))
         NumberOfGenerations = int(input("NumberOfGenerations"))
         GenerationTime= Time  / NumberOfGenerations
