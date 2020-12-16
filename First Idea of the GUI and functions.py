@@ -9,7 +9,7 @@ import math                                                                    #
 
 # Functions -------------
 class Calculations():                                                          #Creates a class which stores all of the formula from the first semester in Year 1
-    def ColonyFormingUnit():                                                   #Function that works out the number of colonys there in after dilution and plating 
+    def ColonyFormingUnit():                                                   #Function that works out the number of colonys in a population of microoganisms, it takes in the dilution factor and number of plated from the user. 
         NumberOfColonies = int(app.question('Number of colonies', 'Please enter as a whole number the number of colonies')) 
         AmountOfPlatted = int(input("AmountOfPlatted"))
         DilutionFactor = float(input("DilutionFactor"))
@@ -17,7 +17,7 @@ class Calculations():                                                          #
         print("CFU", CFU)
         return CFU
     
-    def Exponential_Growth():
+    def Exponential_Growth():                                                  #Function that works out the expontial growth in a population of microoganisms, it takes in the dilution factor and number of plated from the user. 
         ExpontialGrowthRate = float(input("GeometricGrowthRate"))
         Population = int(input("Population"))
         ExponentialGrowth = ExpontialGrowthRate*Population
