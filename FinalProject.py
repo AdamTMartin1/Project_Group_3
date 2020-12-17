@@ -15,10 +15,10 @@ import math
 
    
 class Calculations():          
-    #Creates a class which stores all of the formula from the first semester in Year 1     
+    """Creates a class which stores all of the formula from the first semester in Year 1"""     
     def ColonyFormingUnit():                                                   
-            #Function that works out the number of colonys in a population of microoganisms, 
-            #it takes in the dilution factor and number of plated from the user. 
+        """Function that works out the number of colonys in a population of microoganisms, 
+            it takes in the dilution factor and number of plated from the user. """
         NumberOfColonies = int(app.question('Number of colonies', 'Please enter as a whole number the number of colonies')) 
         AmountOfPlatted = int(app.question("AmountOfPlatted","AmountOfPlatted"))
         DilutionFactor = float(app.question("DilutionFactor","DilutionFactor"))
@@ -28,8 +28,8 @@ class Calculations():
         return CFU       
                                 
     def Exponential_Growth():
-            #Function that works out the expontial growth in a population, 
-            #takes in the expontial growth rate and the population from the user.
+        """Function that works out the expontial growth in a population, 
+            takes in the expontial growth rate and the population from the user."""
         ExpontialGrowthRate = float(app.question("Exponential Growth Rate","Please enter as a number (e.g '1.78') the geometric growth rate"))
         Population = int(app.question('Population',"Please enter as a whole number (e.g '1') the population"))
         ExponentialGrowth = ExpontialGrowthRate*Population
@@ -38,7 +38,8 @@ class Calculations():
         return 
     
     def Geometric_Growth_Over_Time():                                          
-            #Function that works out the geometirc growth in a population over time, it takes in the net reproductive rate and the starting population from the user. 
+        """Function that works out the geometirc growth in a population over time, 
+        it takes in the net reproductive rate and the starting population from the user. """
         NetReproductiveRate = float(app.question("NetReproductiveRate","NetReproductiveRate"))
         StartingPopulation = int(app.question("StartingPopulation","StartingPopulation"))
         GeometricGrowthOverTime = NetReproductiveRate*StartingPopulation       
@@ -48,8 +49,8 @@ class Calculations():
 
                                                    
     def Next_Total_Population():                                               
-            #Function that works out the next total population, it takes in the population at time zero, 
-            #births, deaths, immigration and emmigration from the user.
+        """Function that works out the next total population, it takes in the population at time zero, 
+            births, deaths, immigration and emmigration from the user."""
         PopulationAtTimeZero = int(app.question('Population at time zero',"Please enter as a whole number (e.g '1') the population at time 0"))
         Births = int(app.question('Births',"Please enter as a whole number (e.g '1') the number of births"))
         Deaths = int(app.question('Deaths',"Please enter as a whole number (e.g '1') the number of deaths"))
@@ -61,7 +62,7 @@ class Calculations():
         return NextPopulation
 
     def Generation_Time():                                                     
-        #Function that works out the next total population, it takes in the population at time zero, births, deaths, immigration and emmigration from the user.
+        """Function that works out the next total population, it takes in the population at time zero, births, deaths, immigration and emmigration from the user."""
         Time = float(app.question('Time',"Please enter as a number (e.g '1.75') the value for time"))
         NumberOfGenerations = int(app.question('Number of generations',"Please enter as a whole number (e.g '2') the number of generations"))
         GenerationTime = Time / NumberOfGenerations
@@ -70,8 +71,8 @@ class Calculations():
         return GenerationTime
    
     def Mark_And_Recapture():
-            #Function that works out total population using mark and recapture, number captured first time, 
-            #the number captured the second time and the number of recaptured from the user. 
+        """Function that works out total population using mark and recapture, number captured first time, 
+            the number captured the second time and the number of recaptured from the user. """
         NumberOfCapturedFirstTime = int(app.question('Number Captured First Time',"Please enter as a whole number (e.g '1') the number captured the first time"))
         NumberOfCapturedSecondTime = int(app.question('Number Captured Second Time',"Please enter as a whole number (e.g '1') the number captured the second time"))
         NumberOfRecaptured = int(app.question('Number Recaptured',"Please enter as a whole number (e.g '1') the number recaptured "))
@@ -87,7 +88,7 @@ class Calculations():
 # % yield = (mass of desired products/total mass of reactants)x100
 
     def Percentage_Yield():
-            #Function that works out percentage yeild using actual yield and therotical yeild.  
+        """Function that works out percentage yeild using actual yield and therotical yeild.  """
         ActualYield = float(app.question('Actual Yield',"Please enter as a number (e.g '1.890') the actual yield"))
         TheoreticalYield = float(app.question('Theoretical Yield',"Please enter as a number (e.g '1.890') the theoretical yield"))
         Perc_Yield = (ActualYield/TheoreticalYield)*100
@@ -98,8 +99,8 @@ class Calculations():
 # pH =-log10[H+]
 
     def pH_H():
-            #function that calculates the pH of an equation using Hydrogen ions (H+), it requires a Hydrogen Ion Concentration, 
-            #which it takes the log of (to the base 10) and multiplies by negative 1, giving pH.
+        """function that calculates the pH of an equation using Hydrogen ions (H+), it requires a Hydrogen Ion Concentration, 
+            which it takes the log of (to the base 10) and multiplies by negative 1, giving pH."""
         Hydrogen_ion_concentration = float(app.question('Hydrogen Ion Concentration',"Please enter as a number (e.g '1.890') the hydrogen ion concentration"))
         pH = -1* (math.log10(Hydrogen_ion_concentration))
         print("pH",pH)
@@ -107,9 +108,9 @@ class Calculations():
 
 
     def pH_OH():
-            #function that calculates the pH of an equatin using Hydroxide ions (OH-), 
-            #it requires the Hydoxide ion Concentration, which it then takes the log of (to the base 10) and multiplies by negative 1, 
-            #then it adds the answer to 14 to give pOH.
+        """function that calculates the pH of an equatin using Hydroxide ions (OH-), 
+            it requires the Hydoxide ion Concentration, which it then takes the log of (to the base 10) and multiplies by negative 1, 
+            then it adds the answer to 14 to give pOH."""
         Hydroxide_ion_concentration = float(app.question('Hydroxide Ion Concentration',"Please enter as a number (e.g '1.890') the hydroxide ion concentration"))
         pOH = -1* math.log10(Hydroxide_ion_concentration)
         print("pOH",pOH+14)
