@@ -63,7 +63,7 @@ class Calculations():
         return NextPopulation
 
     def Generation_Time():                                                     
-        """Function that works out the next total population, it takes in the population at time zero, births, deaths, immigration and emmigration from the user."""
+        """Function that works out the Generation time, it takes in the time and number of generations from the user."""
         Time = float(app.question('Time',"Please enter as a number (e.g '1.75') the value for time"))
         NumberOfGenerations = int(app.question('Number of generations',"Please enter as a whole number (e.g '2') the number of generations"))
         GenerationTime = Time / NumberOfGenerations
