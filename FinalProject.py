@@ -2,8 +2,9 @@
 """
 Created on Wed Dec 16 12:08:54 2020
 
-@author: adamt
+
 """
+""" Module imports"""
 
 from guizero import App, Text, PushButton                                      
     #Takes in the folder guizero, importing in each choicen module from that folder. 
@@ -11,7 +12,7 @@ from guizero import App, Text, PushButton
 import math                                                                    
     #Imports the module math which is used for many calculatios and contains useful things such as logs and Exponetial.
 
-# Functions -------------
+""" Class with all the functions within"""
 
    
 class Calculations():          
@@ -83,9 +84,8 @@ class Calculations():
    
 
                          
-#Chem equations for the Project
+    """Chem equations"""
 
-# % yield = (mass of desired products/total mass of reactants)x100
 
     def Percentage_Yield():
         """Function that works out percentage yeild using actual yield and therotical yeild.  """
@@ -96,7 +96,7 @@ class Calculations():
         print("Percentage Yield",Perc_Yield)
         return Perc_Yield
 
-# pH =-log10[H+]
+
 
     def pH_H():
         """function that calculates the pH of an equation using Hydrogen ions (H+), it requires a Hydrogen Ion Concentration, 
@@ -120,15 +120,13 @@ class Calculations():
 
    
 
-# App -------------------
+"""App"""
 
 #the app function was taken from the module guizero which was imported earlier in this code
 
 app = App("Calculator")                                                        
     #Opens the module App, creating a GUI 
-# Widgets ---------------
 
-#both widgets
 
 title = Text(app, "Push the buttons to complete each calculations")            
     #Displays on the GUI a title with the text  
@@ -136,7 +134,7 @@ titlee = Text(app, "it will take you to the console")
     #Displays on the GUI a title with the text 
 
 
-#Buttons on the GUI ----------
+"""Buttons on the GUI """
 CFU_button = PushButton(app, Calculations.ColonyFormingUnit, text="Colony Forming Unit")                
     #Buttons text Colony forming units, once the button is pressed it runs the function ColonyFormingUnit from the class calculations
 EG_button = PushButton(app, Calculations.Geometric_Growth_Over_Time, text="Geometric Growth Over Time") 
