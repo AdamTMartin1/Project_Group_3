@@ -72,7 +72,7 @@ class Calculations():
         return GenerationTime
    
     def Mark_And_Recapture():
-        """Function that works out total population using mark and recapture, number captured first time, 
+        """Function that works out total population using, number captured first time, 
             the number captured the second time and the number of recaptured from the user. """
         NumberOfCapturedFirstTime = int(app.question('Number Captured First Time',"Please enter as a whole number (e.g '1') the number captured the first time"))
         NumberOfCapturedSecondTime = int(app.question('Number Captured Second Time',"Please enter as a whole number (e.g '1') the number captured the second time"))
